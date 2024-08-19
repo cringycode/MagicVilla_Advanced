@@ -10,14 +10,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Navbar Alignment">
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Migrations/20240819203552_addLocalPathForImage.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Migrations/20240819203552_addLocalPathForImage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicVilla_Utility/SD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Utility/SD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Views/Auth/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Views/Auth/Register.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Dto/VillaCreateDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Dto/VillaCreateDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Dto/VillaDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Dto/VillaDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Dto/VillaUpdateDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Dto/VillaUpdateDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Villa.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Villa.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Models/APIRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Models/APIRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Models/Dto/VillaCreateDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Models/Dto/VillaCreateDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Models/Dto/VillaDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Models/Dto/VillaDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Models/Dto/VillaUpdateDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Models/Dto/VillaUpdateDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/BaseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/BaseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/VillaService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/VillaService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Views/Villa/UpdateVilla.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Views/Villa/UpdateVilla.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +76,7 @@
   "keyToString": {
     ".NET Launch Settings Profile.MagicVilla_VillaAPI.executor": "Run",
     ".NET Launch Settings Profile.MagicVilla_Web.executor": "Run",
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -162,7 +175,9 @@
       <workItem from="1724073122102" duration="857000" />
       <workItem from="1724074007091" duration="13000" />
       <workItem from="1724074332912" duration="1000" />
-      <workItem from="1724074721229" duration="5701000" />
+      <workItem from="1724074721229" duration="5874000" />
+      <workItem from="1724098753357" duration="796000" />
+      <workItem from="1724099803024" duration="1877000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -196,18 +211,28 @@
       <option name="project" value="LOCAL" />
       <updated>1724078777250</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Role Based Navbar">
+      <option name="closed" value="true" />
+      <created>1724080604180</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724080604180</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="DB Setup" />
     <MESSAGE value="Configure V2 for all Endpoints" />
     <MESSAGE value="Dynamic API Versions" />
     <MESSAGE value="Navbar Alignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navbar Alignment" />
+    <MESSAGE value="Role Based Navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Role Based Navbar" />
   </component>
 </project>
