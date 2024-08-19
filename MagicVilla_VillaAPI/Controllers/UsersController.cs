@@ -11,6 +11,8 @@ namespace MagicVilla_VillaAPI.Controllers
     [ApiVersionNeutral]
     public class UsersController : Controller
     {
+        #region DI
+
         private readonly IUserRepository _userRepo;
         protected APIResponse _response;
         public UsersController(IUserRepository userRepo)
@@ -18,6 +20,8 @@ namespace MagicVilla_VillaAPI.Controllers
             _userRepo = userRepo;
             _response = new();
         }
+
+        #endregion
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDTO model)
