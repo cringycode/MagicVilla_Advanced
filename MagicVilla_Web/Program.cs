@@ -10,16 +10,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 
-builder.Services.AddScoped<IVillaService, VillaService>();
-builder.Services.AddScoped<ITokenProvider, TokenProvider>();
-builder.Services.AddScoped<IVillaNumberService, VillaNumberService>();
-builder.Services.AddScoped<IAuthService, AuthService>();
-
 builder.Services.AddHttpClient<IVillaService, VillaService>();
-builder.Services.AddHttpClient<IVillaNumberService, VillaNumberService>();
-builder.Services.AddHttpClient<IAuthService, AuthService>();
+builder.Services.AddScoped<IVillaService, VillaService>();
 
+builder.Services.AddHttpClient<IVillaNumberService, VillaNumberService>();
+builder.Services.AddScoped<IVillaNumberService, VillaNumberService>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddHttpClient<IAuthService, AuthService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
