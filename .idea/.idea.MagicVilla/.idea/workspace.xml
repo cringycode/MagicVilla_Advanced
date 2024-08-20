@@ -10,16 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="File Upload pt.2">
-      <change afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/wwwroot/ProductImage/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/wwwroot/ProductImage/8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/v2/VillaAPIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/v2/VillaAPIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/wwwroot/ProductImage/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Views/Villa/CreateVilla.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Views/Villa/CreateVilla.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Views/Villa/UpdateVilla.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Views/Villa/UpdateVilla.cshtml" afterDir="false" />
-    </list>
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,32 +49,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.MagicVilla_VillaAPI.executor": "Run",
-    ".NET Launch Settings Profile.MagicVilla_Web.executor": "Run",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.MagicVilla_VillaAPI.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.MagicVilla_Web.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Kourosh\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache",
-      "C:\\Users\\Kourosh\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache",
-      "C:\\Users\\Kourosh\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Kourosh\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Kourosh\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache&quot;,
+      &quot;C:\\Users\\Kourosh\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Multi-Launch.Multi-Launch: MagicVilla">
     <configuration name="MagicVilla_VillaAPI" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj" />
@@ -164,7 +155,7 @@
       <workItem from="1724074721229" duration="5874000" />
       <workItem from="1724098753357" duration="796000" />
       <workItem from="1724099803024" duration="1963000" />
-      <workItem from="1724150572632" duration="5340000" />
+      <workItem from="1724150572632" duration="5798000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -222,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724161083985</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="File Upload pt.3">
+      <option name="closed" value="true" />
+      <created>1724164145443</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724164145443</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +248,8 @@
     <MESSAGE value="Role Based Navbar" />
     <MESSAGE value="File Upload pt.1" />
     <MESSAGE value="File Upload pt.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="File Upload pt.2" />
+    <MESSAGE value="File" />
+    <MESSAGE value="File Upload pt.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="File Upload pt.3" />
   </component>
 </project>
