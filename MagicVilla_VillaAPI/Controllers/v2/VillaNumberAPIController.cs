@@ -11,6 +11,7 @@ namespace MagicVilla_VillaAPI.Controllers.v2
     [Route("api/v{version:apiVersion}/VillaNumberAPI")]
     [ApiController]
     [ApiVersion("2.0")]
+    [Authorize(Roles = "Admin")]
     public class VillaNumberAPIController : ControllerBase
     {
         #region DI
@@ -31,7 +32,6 @@ namespace MagicVilla_VillaAPI.Controllers.v2
 
         #endregion
 
-
         [HttpGet("GetString")]
         public IEnumerable<string> Get()
         {
@@ -39,7 +39,6 @@ namespace MagicVilla_VillaAPI.Controllers.v2
         }
 
         [HttpGet]
-        //[MapToApiVersion("1.0")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<APIResponse>> GetVillaNumbers()
         {
@@ -96,7 +95,6 @@ namespace MagicVilla_VillaAPI.Controllers.v2
             return _response;
         }
 
-        [Authorize(Roles = "admin")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -140,7 +138,6 @@ namespace MagicVilla_VillaAPI.Controllers.v2
             return _response;
         }
 
-        [Authorize(Roles = "admin")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -175,7 +172,6 @@ namespace MagicVilla_VillaAPI.Controllers.v2
             return _response;
         }
 
-        [Authorize(Roles = "admin")]
         [HttpPut("{id:int}", Name = "UpdateVillaNumber")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
