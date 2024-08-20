@@ -10,12 +10,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/wwwroot/ProductImage/6.jpg" afterDir="false" />
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="File Upload pt.2">
+      <change afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/wwwroot/ProductImage/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/wwwroot/ProductImage/8.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/v1/VillaAPIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/v1/VillaAPIController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/v2/VillaAPIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/v2/VillaAPIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/wwwroot/ProductImage/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Views/Villa/CreateVilla.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Views/Villa/CreateVilla.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Views/Villa/UpdateVilla.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Views/Villa/UpdateVilla.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +44,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_VillaAPI/Data/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_Web/Services/AuthService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/946d6a0391cc43a8b8cecafb3ddc3abd1e38a0/c9/1aa44e65/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -60,8 +60,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.MagicVilla_VillaAPI.executor": "Debug",
-    ".NET Launch Settings Profile.MagicVilla_Web.executor": "Debug",
+    ".NET Launch Settings Profile.MagicVilla_VillaAPI.executor": "Run",
+    ".NET Launch Settings Profile.MagicVilla_Web.executor": "Run",
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -164,7 +164,7 @@
       <workItem from="1724074721229" duration="5874000" />
       <workItem from="1724098753357" duration="796000" />
       <workItem from="1724099803024" duration="1963000" />
-      <workItem from="1724150572632" duration="2768000" />
+      <workItem from="1724150572632" duration="5340000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -214,11 +214,30 @@
       <option name="project" value="LOCAL" />
       <updated>1724101748362</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="File Upload pt.2">
+      <option name="closed" value="true" />
+      <created>1724161083985</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724161083985</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -229,6 +248,7 @@
     <MESSAGE value="Navbar Alignment" />
     <MESSAGE value="Role Based Navbar" />
     <MESSAGE value="File Upload pt.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="File Upload pt.1" />
+    <MESSAGE value="File Upload pt.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="File Upload pt.2" />
   </component>
 </project>
