@@ -20,7 +20,7 @@ public class TokenProvider : ITokenProvider
     public void SetToken(TokenDTO tokenDTO)
     {
         var cookieOptions = new CookieOptions { Expires = DateTimeOffset.UtcNow.AddDays(60) };
-        _contextAccessor.HttpContext?.Response.Cookies.Append(SD.AccessToken, tokenDTO.Token, cookieOptions);
+        _contextAccessor.HttpContext?.Response.Cookies.Append(SD.AccessToken, tokenDTO.AccessToken, cookieOptions);
     }
 
     public TokenDTO GetToken()
@@ -31,11 +31,11 @@ public class TokenProvider : ITokenProvider
                 _contextAccessor.HttpContext.Request.Cookies.TryGetValue(SD.AccessToken, out string accessToken);
             TokenDTO tokenDTO = new()
             {
-                Token = accessToken
+                AccessToken = accessToken
             };
             return hasAccessToken ? tokenDTO : null;
         }
-        catch (Exception e)
+        catch (Exception ex)
         {
             return null;
         }

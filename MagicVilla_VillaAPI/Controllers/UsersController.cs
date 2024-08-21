@@ -15,6 +15,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
         private readonly IUserRepository _userRepo;
         protected APIResponse _response;
+
         public UsersController(IUserRepository userRepo)
         {
             _userRepo = userRepo;
@@ -27,13 +28,14 @@ namespace MagicVilla_VillaAPI.Controllers
         public async Task<IActionResult> Login([FromBody] LoginRequestDTO model)
         {
             var TokenDto = await _userRepo.Login(model);
-            if (TokenDto == null || string.IsNullOrEmpty(TokenDto.Token))
+            if (TokenDto == null || string.IsNullOrEmpty(TokenDto.AccessToken))
             {
                 _response.StatusCode = HttpStatusCode.BadRequest;
                 _response.IsSuccess = false;
                 _response.ErrorMessages.Add("Username or password is incorrect");
                 return BadRequest(_response);
             }
+
             _response.StatusCode = HttpStatusCode.OK;
             _response.IsSuccess = true;
             _response.Result = TokenDto;
@@ -60,6 +62,7 @@ namespace MagicVilla_VillaAPI.Controllers
                 _response.ErrorMessages.Add("Error while registering");
                 return BadRequest(_response);
             }
+
             _response.StatusCode = HttpStatusCode.OK;
             _response.IsSuccess = true;
             return Ok(_response);

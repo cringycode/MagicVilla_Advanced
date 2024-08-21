@@ -15,16 +15,18 @@ namespace MagicVilla_Web.Services
 
         public APIResponse responseModel { get; set; }
         public IHttpClientFactory httpClient { get; set; }
+        private readonly ITokenProvider _tokenProvider;
 
-        public BaseService(IHttpClientFactory httpClient)
+        public BaseService(IHttpClientFactory httpClient, ITokenProvider tokenProvider)
         {
+            _tokenProvider = tokenProvider;
             this.responseModel = new();
             this.httpClient = httpClient;
         }
 
         #endregion
 
-        #region SEND
+        #region SEND ASYNC
 
         public async Task<T> SendAsync<T>(APIRequest apiRequest)
         {
@@ -43,6 +45,12 @@ namespace MagicVilla_Web.Services
                 }
 
                 message.RequestUri = new Uri(apiRequest.Url);
+                if (_tokenProvider.GetToken() != null)
+                {
+                    var token = _tokenProvider.GetToken();
+                    client.DefaultRequestHeaders.Authorization =
+                        new AuthenticationHeaderValue("Bearer", token.AccessToken);
+                }
 
                 if (apiRequest.ContentType == ContentType.MultipartFormData)
                 {
