@@ -10,24 +10,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="">
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="1. Remove Token from API Calls Using Session&#10;2. Pass Bearer Token on HttpClient&#10;3. Add Base Service to DI">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Dto/TokenDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Dto/TokenDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaNumberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaNumberController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Models/Dto/TokenDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Models/Dto/TokenDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/AuthService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/BaseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/BaseService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/IServices/IVillaNumberService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/IServices/IVillaNumberService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/IServices/IVillaService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/IServices/IVillaService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/TokenProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/TokenProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/VillaNumberService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/VillaNumberService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/VillaService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/VillaService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/IServices/IBaseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/IServices/IBaseService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +164,7 @@
       <workItem from="1724099803024" duration="1963000" />
       <workItem from="1724150572632" duration="5798000" />
       <workItem from="1724180901194" duration="2591000" />
-      <workItem from="1724243947102" duration="1842000" />
+      <workItem from="1724243947102" duration="3062000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -267,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724184501343</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1. Remove Token from API Calls Using Session&#10;2. Pass Bearer Token on HttpClient&#10;3. Add Base Service to DI">
+      <option name="closed" value="true" />
+      <created>1724246182096</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1724246182096</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +294,7 @@
     <MESSAGE value="Rename JWT Token" />
     <MESSAGE value="Rename Login Response DTO" />
     <MESSAGE value="Bug Fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="1. Remove Token from API Calls Using Session&#10;2. Pass Bearer Token on HttpClient&#10;3. Add Base Service to DI" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Remove Token from API Calls Using Session&#10;2. Pass Bearer Token on HttpClient&#10;3. Add Base Service to DI" />
   </component>
 </project>
