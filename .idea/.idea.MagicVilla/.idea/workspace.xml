@@ -10,9 +10,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Create New Refresh Token">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/dataSources/610bf8e8-a20c-4835-a304-31ed1e2aeada.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/dataSources/610bf8e8-a20c-4835-a304-31ed1e2aeada.xml" afterDir="false" />
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Add Refresh Token to Token Provider">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +165,7 @@
       <workItem from="1724243947102" duration="3465000" />
       <workItem from="1724328667287" duration="1518000" />
       <workItem from="1724332113479" duration="1827000" />
-      <workItem from="1724347527631" duration="2057000" />
+      <workItem from="1724347527631" duration="2870000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -311,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724349128555</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add Refresh Token to Token Provider">
+      <option name="closed" value="true" />
+      <created>1724350126849</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724350126849</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,6 +358,7 @@
     <MESSAGE value="User Controller Endpoint" />
     <MESSAGE value="Get Access Token Data" />
     <MESSAGE value="Create New Refresh Token" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create New Refresh Token" />
+    <MESSAGE value="Add Refresh Token to Token Provider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Refresh Token to Token Provider" />
   </component>
 </project>
