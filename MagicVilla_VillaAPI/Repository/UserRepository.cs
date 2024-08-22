@@ -174,15 +174,9 @@ namespace MagicVilla_VillaAPI.Repository
             {
                 var chainRecords = _db.RefreshTokens.Where
                 (u => u.UserId == existingRefreshToken.UserId
-                      && u.JwtTokenId == existingRefreshToken.JwtTokenId);
+                      && u.JwtTokenId == existingRefreshToken.JwtTokenId).ExecuteUpdate(u =>
+                    u.SetProperty(refreshToken => refreshToken.IsValid, false));
 
-                foreach (var item in chainRecords)
-                {
-                    item.IsValid = false;
-                }
-
-                _db.UpdateRange(chainRecords);
-                _db.SaveChanges();
                 return new TokenDTO();
             }
 

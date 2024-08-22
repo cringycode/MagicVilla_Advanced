@@ -10,9 +10,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="">
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Chain Validation">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Utility/MagicVilla_Utility.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Utility/MagicVilla_Utility.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/MagicVilla_Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/MagicVilla_Web.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +43,6 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/946d6a0391cc43a8b8cecafb3ddc3abd1e38a0/c9/1aa44e65/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_VillaAPI/Repository/UserRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_VillaAPI/Repository/UserRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_VillaAPI/Repository/UserRepository.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -168,7 +169,7 @@
       <workItem from="1724328667287" duration="1518000" />
       <workItem from="1724332113479" duration="1827000" />
       <workItem from="1724347527631" duration="4587000" />
-      <workItem from="1724360534710" duration="896000" />
+      <workItem from="1724360534710" duration="1630000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -338,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724353283391</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Chain Validation">
+      <option name="closed" value="true" />
+      <created>1724361912659</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1724361912659</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,6 +389,7 @@
     <MESSAGE value="Add Refresh Token to Token Provider" />
     <MESSAGE value="Create New Access Token from Refresh Token" />
     <MESSAGE value="Bugs Fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugs Fixed" />
+    <MESSAGE value="Chain Validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chain Validation" />
   </component>
 </project>
