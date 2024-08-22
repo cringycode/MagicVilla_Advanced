@@ -10,13 +10,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Refresh Token Model &amp; Table">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Dto/TokenDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Models/Dto/TokenDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/IRepostiory/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/IRepostiory/IUserRepository.cs" afterDir="false" />
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="User Controller Endpoint">
       <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Models/Dto/TokenDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Models/Dto/TokenDTO.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +41,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/946d6a0391cc43a8b8cecafb3ddc3abd1e38a0/c9/1aa44e65/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_VillaAPI/Data/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_VillaAPI/Data/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_VillaAPI/Repository/IRepostiory/IUserRepository.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -169,7 +165,7 @@
       <workItem from="1724180901194" duration="2591000" />
       <workItem from="1724243947102" duration="3465000" />
       <workItem from="1724328667287" duration="1518000" />
-      <workItem from="1724332113479" duration="1280000" />
+      <workItem from="1724332113479" duration="1593000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -291,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724346331541</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="User Controller Endpoint">
+      <option name="closed" value="true" />
+      <created>1724346901941</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1724346901941</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +331,7 @@
     <MESSAGE value="Bearer Flag" />
     <MESSAGE value="Separating out Access Token Generator" />
     <MESSAGE value="Refresh Token Model &amp; Table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refresh Token Model &amp; Table" />
+    <MESSAGE value="User Controller Endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Controller Endpoint" />
   </component>
 </project>
