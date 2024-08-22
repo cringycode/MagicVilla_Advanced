@@ -10,9 +10,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Create New Access Token from Refresh Token">
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/UsersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +40,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/946d6a0391cc43a8b8cecafb3ddc3abd1e38a0/c9/1aa44e65/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_VillaAPI/Repository/UserRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_VillaAPI/Repository/UserRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_VillaAPI/Repository/UserRepository.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -167,7 +167,8 @@
       <workItem from="1724243947102" duration="3465000" />
       <workItem from="1724328667287" duration="1518000" />
       <workItem from="1724332113479" duration="1827000" />
-      <workItem from="1724347527631" duration="4405000" />
+      <workItem from="1724347527631" duration="4587000" />
+      <workItem from="1724360534710" duration="896000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -329,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724350700202</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Bugs Fixed">
+      <option name="closed" value="true" />
+      <created>1724353283391</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1724353283391</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +379,7 @@
     <MESSAGE value="Create New Refresh Token" />
     <MESSAGE value="Add Refresh Token to Token Provider" />
     <MESSAGE value="Create New Access Token from Refresh Token" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create New Access Token from Refresh Token" />
+    <MESSAGE value="Bugs Fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bugs Fixed" />
   </component>
 </project>
