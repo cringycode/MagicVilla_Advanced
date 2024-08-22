@@ -67,10 +67,12 @@ namespace MagicVilla_VillaAPI.Repository
 
             var jwtTokenId = $"JTI{Guid.NewGuid()}";
             var accessToken = await GetAccessToken(user, jwtTokenId);
+            var refreshToken = await CreateNewRefreshToken(user.Id, jwtTokenId);
 
-            TokenDTO tokenDto = new TokenDTO()
+            TokenDTO tokenDto = new()
             {
-                AccessToken = accessToken
+                AccessToken = accessToken,
+                RefreshToken = refreshToken
             };
             return tokenDto;
         }
@@ -132,7 +134,7 @@ namespace MagicVilla_VillaAPI.Repository
                     new Claim(JwtRegisteredClaimNames.Jti, jwtTokenId),
                     new Claim(JwtRegisteredClaimNames.Sub, user.Id)
                 }),
-                Expires = DateTime.UtcNow.AddDays(7),
+                Expires = DateTime.UtcNow.AddMinutes(60),
                 SigningCredentials = new(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
@@ -148,6 +150,26 @@ namespace MagicVilla_VillaAPI.Repository
         public Task<TokenDTO> RefreshAccessToken(TokenDTO tokenDTO)
         {
             throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region CREATE NEW REFRESH TOKEN
+
+        private async Task<string> CreateNewRefreshToken(string userId, string tokenId)
+        {
+            RefreshToken refreshToken = new()
+            {
+                IsValid = true,
+                UserId = userId,
+                JwtTokenId = tokenId,
+                ExpiresAt = DateTime.UtcNow.AddDays(30),
+                Refresh_Token = Guid.NewGuid() + "-" + Guid.NewGuid(),
+            };
+
+            await _db.RefreshTokens.AddAsync(refreshToken);
+            await _db.SaveChangesAsync();
+            return refreshToken.Refresh_Token;
         }
 
         #endregion
