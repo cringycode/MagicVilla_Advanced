@@ -10,12 +10,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Chain Validation">
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Update To .Net 8">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Utility/MagicVilla_Utility.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Utility/MagicVilla_Utility.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Repository/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/MagicVilla_Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/MagicVilla_Web.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/BaseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/BaseService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +167,7 @@
       <workItem from="1724328667287" duration="1518000" />
       <workItem from="1724332113479" duration="1827000" />
       <workItem from="1724347527631" duration="4587000" />
-      <workItem from="1724360534710" duration="1630000" />
+      <workItem from="1724360534710" duration="3183000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -347,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724361912659</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Update To .Net 8">
+      <option name="closed" value="true" />
+      <created>1724362769944</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724362769944</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,6 +396,7 @@
     <MESSAGE value="Create New Access Token from Refresh Token" />
     <MESSAGE value="Bugs Fixed" />
     <MESSAGE value="Chain Validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chain Validation" />
+    <MESSAGE value="Update To .Net 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update To .Net 8" />
   </component>
 </project>

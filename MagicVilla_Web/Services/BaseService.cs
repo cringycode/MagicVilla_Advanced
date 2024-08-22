@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using static MagicVilla_Utility.SD;
 using System.Net.Http.Headers;
 using System.Text;
+using MagicVilla_Web.Models.Dto;
 
 namespace MagicVilla_Web.Services
 {
@@ -28,87 +29,87 @@ namespace MagicVilla_Web.Services
 
         #region SEND ASYNC
 
-        public async Task<T> SendAsync<T>(APIRequest apiRequest,bool withBearer = true)
+        public async Task<T> SendAsync<T>(APIRequest apiRequest, bool withBearer = true)
         {
             try
             {
                 var client = httpClient.CreateClient("MagicAPI");
-                HttpRequestMessage message = new HttpRequestMessage();
 
-                if (apiRequest.ContentType == ContentType.MultipartFormData)
+                var messageFactory = () =>
                 {
-                    message.Headers.Add("Accept", "*/*");
-                }
-                else
-                {
-                    message.Headers.Add("Accept", "application/json");
-                }
+                    HttpRequestMessage message = new();
 
-                message.RequestUri = new Uri(apiRequest.Url);
-                if (withBearer && _tokenProvider.GetToken() != null)
-                {
-                    var token = _tokenProvider.GetToken();
-                    client.DefaultRequestHeaders.Authorization =
-                        new AuthenticationHeaderValue("Bearer", token.AccessToken);
-                }
-
-                if (apiRequest.ContentType == ContentType.MultipartFormData)
-                {
-                    var content = new MultipartFormDataContent();
-
-                    foreach (var prop in apiRequest.Data.GetType().GetProperties())
+                    if (apiRequest.ContentType == ContentType.MultipartFormData)
                     {
-                        var value = prop.GetValue(apiRequest.Data);
-                        if (value is FormFile)
+                        message.Headers.Add("Accept", "*/*");
+                    }
+                    else
+                    {
+                        message.Headers.Add("Accept", "application/json");
+                    }
+
+                    message.RequestUri = new Uri(apiRequest.Url);
+                    if (withBearer && _tokenProvider.GetToken() != null)
+                    {
+                        var token = _tokenProvider.GetToken();
+                        client.DefaultRequestHeaders.Authorization =
+                            new AuthenticationHeaderValue("Bearer", token.AccessToken);
+                    }
+
+                    if (apiRequest.ContentType == ContentType.MultipartFormData)
+                    {
+                        var content = new MultipartFormDataContent();
+
+                        foreach (var prop in apiRequest.Data.GetType().GetProperties())
                         {
-                            var file = (FormFile)value;
-                            if (file != null)
+                            var value = prop.GetValue(apiRequest.Data);
+                            if (value is FormFile)
                             {
-                                content.Add(new StreamContent(file.OpenReadStream()), prop.Name, file.FileName);
+                                var file = (FormFile)value;
+                                if (file != null)
+                                {
+                                    content.Add(new StreamContent(file.OpenReadStream()), prop.Name, file.FileName);
+                                }
+                            }
+                            else
+                            {
+                                content.Add(new StringContent(value == null ? "" : value.ToString()), prop.Name);
                             }
                         }
-                        else
+
+                        message.Content = content;
+                    }
+                    else
+                    {
+                        if (apiRequest.Data != null)
                         {
-                            content.Add(new StringContent(value == null ? "" : value.ToString()), prop.Name);
+                            message.Content = new StringContent(JsonConvert.SerializeObject(apiRequest.Data),
+                                Encoding.UTF8, "application/json");
                         }
                     }
 
-                    message.Content = content;
-                }
-                else
-                {
-                    if (apiRequest.Data != null)
+                    switch (apiRequest.ApiType)
                     {
-                        message.Content = new StringContent(JsonConvert.SerializeObject(apiRequest.Data),
-                            Encoding.UTF8, "application/json");
+                        case SD.ApiType.POST:
+                            message.Method = HttpMethod.Post;
+                            break;
+                        case SD.ApiType.PUT:
+                            message.Method = HttpMethod.Put;
+                            break;
+                        case SD.ApiType.DELETE:
+                            message.Method = HttpMethod.Delete;
+                            break;
+                        default:
+                            message.Method = HttpMethod.Get;
+                            break;
                     }
-                }
 
-                switch (apiRequest.ApiType)
-                {
-                    case SD.ApiType.POST:
-                        message.Method = HttpMethod.Post;
-                        break;
-                    case SD.ApiType.PUT:
-                        message.Method = HttpMethod.Put;
-                        break;
-                    case SD.ApiType.DELETE:
-                        message.Method = HttpMethod.Delete;
-                        break;
-                    default:
-                        message.Method = HttpMethod.Get;
-                        break;
-                }
+                    return message;
+                };
 
                 HttpResponseMessage apiResponse = null;
 
-                if (!string.IsNullOrEmpty(apiRequest.Token))
-                {
-                    client.DefaultRequestHeaders.Authorization =
-                        new AuthenticationHeaderValue("Bearer", apiRequest.Token);
-                }
-
-                apiResponse = await client.SendAsync(message);
+                apiResponse = await SendWithRefreshTokenAsync(client, messageFactory, withBearer);
 
                 var apiContent = await apiResponse.Content.ReadAsStringAsync();
                 try
@@ -143,6 +144,43 @@ namespace MagicVilla_Web.Services
                 var res = JsonConvert.SerializeObject(dto);
                 var APIResponse = JsonConvert.DeserializeObject<T>(res);
                 return APIResponse;
+            }
+        }
+
+        #endregion
+
+        #region SEND WITH REFRESH TOKEN ASYNC
+
+        private async Task<HttpResponseMessage> SendWithRefreshTokenAsync(HttpClient httpClient,
+            Func<HttpRequestMessage> httpRequestMessageFactory, bool withBearer = true)
+        {
+            if (!withBearer)
+            {
+                return await httpClient.SendAsync(httpRequestMessageFactory());
+            }
+            else
+            {
+                TokenDTO tokenDTO = _tokenProvider.GetToken();
+                if (tokenDTO != null && !string.IsNullOrEmpty(tokenDTO.AccessToken))
+                {
+                    httpClient.DefaultRequestHeaders.Authorization =
+                        new AuthenticationHeaderValue("Bearer", tokenDTO.AccessToken);
+                }
+
+                try
+                {
+                    var response = await httpClient.SendAsync(httpRequestMessageFactory());
+                    if (response.IsSuccessStatusCode)
+                        return response;
+
+                    // IF this fails then we can pass refresh token!
+
+                    return response;
+                }
+                catch (Exception e)
+                {
+                    throw;
+                }
             }
         }
 
