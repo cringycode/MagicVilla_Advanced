@@ -33,6 +33,8 @@ namespace MagicVilla_VillaAPI.Repository
 
         #endregion
 
+        #region IS UNIQUE USER
+
         public bool IsUniqueUser(string username)
         {
             var user = _db.ApplicationUsers.FirstOrDefault(x => x.UserName == username);
@@ -43,6 +45,10 @@ namespace MagicVilla_VillaAPI.Repository
 
             return false;
         }
+
+        #endregion
+
+        #region LOGIN
 
         public async Task<TokenDTO> Login(LoginRequestDTO loginRequestDTO)
         {
@@ -67,6 +73,10 @@ namespace MagicVilla_VillaAPI.Repository
             };
             return tokenDto;
         }
+
+        #endregion
+
+        #region REGISTER
 
         public async Task<UserDTO> Register(RegisterationRequestDTO registerationRequestDTO)
         {
@@ -101,6 +111,10 @@ namespace MagicVilla_VillaAPI.Repository
             return new UserDTO();
         }
 
+        #endregion
+
+        #region GET ACCESS TOKEN
+
         private async Task<string> GetAccessToken(ApplicationUser user)
         {
             //if user was found generate JWT Token
@@ -123,5 +137,16 @@ namespace MagicVilla_VillaAPI.Repository
             var tokenStr = tokenHandler.WriteToken(token);
             return tokenStr;
         }
+
+        #endregion
+
+        #region REFRESH ACCESS TOKEN
+
+        public Task<TokenDTO> RefreshAccessToken(TokenDTO tokenDTO)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }
