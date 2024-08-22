@@ -160,13 +160,14 @@ namespace MagicVilla_VillaAPI.Repository
 
             // Compare data from existing refresh and access token provided and if there is any missmatch then consider it as a fraud
             var accessTokenData = GetAccessTokenData(tokenDTO.AccessToken);
-            if (!accessTokenData.isSuccessful || accessTokenData.userId != existingRefreshToken.UserId
-                                              || accessTokenData.tokenId != existingRefreshToken.JwtTokenId)
+            if (!accessTokenData.isSuccessful
+                || accessTokenData.userId != existingRefreshToken.UserId
+                || accessTokenData.tokenId != existingRefreshToken.JwtTokenId)
             {
                 existingRefreshToken.IsValid = false;
                 _db.SaveChanges();
+                return new TokenDTO();
             }
-
             // When someone tries to use not valid refresh token, fraud possible
 
             // If just expired then mark as invalid and return empty
@@ -174,17 +175,16 @@ namespace MagicVilla_VillaAPI.Repository
             {
                 existingRefreshToken.IsValid = false;
                 _db.SaveChanges();
+                return new TokenDTO();
             }
 
             // replace old refresh with a new one with updated expire date
             var newRefreshToken =
                 await CreateNewRefreshToken(existingRefreshToken.UserId, existingRefreshToken.JwtTokenId);
 
-
             // revoke existing refresh token
             existingRefreshToken.IsValid = false;
             _db.SaveChanges();
-
             // generate new access token
             var applicationUser = _db.ApplicationUsers.FirstOrDefault(u => u.Id == existingRefreshToken.UserId);
             if (applicationUser == null)
@@ -196,7 +196,7 @@ namespace MagicVilla_VillaAPI.Repository
             {
                 AccessToken = newAccessToken,
                 RefreshToken = newRefreshToken,
-            };
+            }; 
         }
 
         #endregion
