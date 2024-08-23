@@ -10,11 +10,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Modify Base Service For Error Handling">
-      <change afterPath="$PROJECT_DIR$/MagicVilla_Web/Extensions/AuthExceptionRedirection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/AuthException.cs" afterDir="false" />
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Auth Exception">
+      <change afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/ApiMessageRequestBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/IServices/IApiMessageRequestBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaNumberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaNumberController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/BaseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/BaseService.cs" afterDir="false" />
     </list>
@@ -173,7 +172,7 @@
       <workItem from="1724332113479" duration="1827000" />
       <workItem from="1724347527631" duration="4587000" />
       <workItem from="1724360534710" duration="3508000" />
-      <workItem from="1724418489706" duration="8292000" />
+      <workItem from="1724418489706" duration="9111000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -391,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724436209505</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Auth Exception">
+      <option name="closed" value="true" />
+      <created>1724438696278</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1724438696278</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +418,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Navbar Alignment" />
     <MESSAGE value="Role Based Navbar" />
     <MESSAGE value="File Upload pt.1" />
     <MESSAGE value="File Upload pt.2" />
@@ -436,6 +442,7 @@
     <MESSAGE value="Invoke Refresh Token Endpoint" />
     <MESSAGE value="Get New Refresh Token &amp; Sign in User" />
     <MESSAGE value="Modify Base Service For Error Handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify Base Service For Error Handling" />
+    <MESSAGE value="Auth Exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auth Exception" />
   </component>
 </project>
