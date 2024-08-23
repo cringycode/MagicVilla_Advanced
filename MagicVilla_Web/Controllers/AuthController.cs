@@ -50,7 +50,8 @@ namespace MagicVilla_Web.Controllers
                 var jwt = handler.ReadJwtToken(model.AccessToken);
 
                 var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
-                identity.AddClaim(new Claim(ClaimTypes.Name, jwt.Claims.FirstOrDefault(u => u.Type == "unique_name").Value));
+                identity.AddClaim(new Claim(ClaimTypes.Name,
+                    jwt.Claims.FirstOrDefault(u => u.Type == "unique_name").Value));
                 identity.AddClaim(new Claim(ClaimTypes.Role, jwt.Claims.FirstOrDefault(u => u.Type == "role").Value));
                 var principal = new ClaimsPrincipal(identity);
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
@@ -111,6 +112,8 @@ namespace MagicVilla_Web.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
+            var token = _tokenProvider.GetToken();
+            await _authService.LogOutAsync<APIResponse>(token);
             _tokenProvider.ClearToken();
             return RedirectToAction("Index", "Home");
         }
