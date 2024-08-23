@@ -10,9 +10,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Get New Refresh Token &amp; Sign in User">
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Modify Base Service For Error Handling">
+      <change afterPath="$PROJECT_DIR$/MagicVilla_Web/Extensions/AuthExceptionRedirection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/AuthException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaNumberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Controllers/VillaNumberController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicVilla_Web/Services/BaseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_Web/Services/BaseService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +44,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/946d6a0391cc43a8b8cecafb3ddc3abd1e38a0/c9/1aa44e65/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_Web/Services/BaseService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_Web/Services/BaseService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Dev/Courses/DotNetCore/Patel/API pt. 2/0. Project Resources/Initial Code - MagicVilla_API/MagicVilla_Web/Services/BaseService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -169,7 +173,7 @@
       <workItem from="1724332113479" duration="1827000" />
       <workItem from="1724347527631" duration="4587000" />
       <workItem from="1724360534710" duration="3508000" />
-      <workItem from="1724418489706" duration="6236000" />
+      <workItem from="1724418489706" duration="8292000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -379,7 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724428709556</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Modify Base Service For Error Handling">
+      <option name="closed" value="true" />
+      <created>1724436209505</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1724436209505</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +411,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Dynamic API Versions" />
     <MESSAGE value="Navbar Alignment" />
     <MESSAGE value="Role Based Navbar" />
     <MESSAGE value="File Upload pt.1" />
@@ -424,6 +435,7 @@
     <MESSAGE value="Modify Base Service For Web Project &amp; Refresh Tokens" />
     <MESSAGE value="Invoke Refresh Token Endpoint" />
     <MESSAGE value="Get New Refresh Token &amp; Sign in User" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get New Refresh Token &amp; Sign in User" />
+    <MESSAGE value="Modify Base Service For Error Handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify Base Service For Error Handling" />
   </component>
 </project>

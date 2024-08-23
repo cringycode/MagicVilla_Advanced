@@ -206,7 +206,7 @@ namespace MagicVilla_Web.Controllers
                 TempData["error"] = (response.ErrorMessages != null && response.ErrorMessages.Count > 0)
                     ? response.ErrorMessages[0]
                     : "Error Encountered!";
-            } 
+            }  
 
             return View(model);
         }

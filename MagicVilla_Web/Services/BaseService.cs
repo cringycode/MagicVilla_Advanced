@@ -151,6 +151,11 @@ namespace MagicVilla_Web.Services
                 var returnObj = JsonConvert.DeserializeObject<T>(res);
                 return returnObj;
             }
+
+            catch(AuthException)
+            {
+                throw;
+            }
             catch (Exception e)
             {
                 var dto = new APIResponse
@@ -191,9 +196,19 @@ namespace MagicVilla_Web.Services
                         return response;
 
                     // IF this fails then we can pass refresh token!
-                    await InvokeRefreshTokenEndpoint(httpClient, tokenDTO.AccessToken, tokenDTO.RefreshToken);
-                    response = await httpClient.SendAsync(httpRequestMessageFactory());
+                    if (!response.IsSuccessStatusCode && response.StatusCode == HttpStatusCode.Unauthorized)
+                    {
+                        //GENERATE NEW Token from Refresh token / Sign in with that new token and then retry
+                        await InvokeRefreshTokenEndpoint(httpClient, tokenDTO.AccessToken, tokenDTO.RefreshToken);
+                        response = await httpClient.SendAsync(httpRequestMessageFactory());
+                        return response;
+                    }
+
                     return response;
+                }
+                catch (AuthException)
+                {
+                    throw;
                 }
                 catch (HttpRequestException httpRequestException)
                 {
@@ -234,6 +249,7 @@ namespace MagicVilla_Web.Services
             {
                 await _httpContextAccessor.HttpContext.SignOutAsync();
                 _tokenProvider.ClearToken();
+                throw new AuthException();
             }
             else
             {
