@@ -10,13 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Auto Migrator">
-      <change afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/ErrorHandlingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/MagicVilla_VillaAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Error Handler Endpoint" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +167,7 @@
       <workItem from="1724347527631" duration="4587000" />
       <workItem from="1724360534710" duration="3508000" />
       <workItem from="1724418489706" duration="12337000" />
-      <workItem from="1724501793647" duration="3557000" />
+      <workItem from="1724501793647" duration="3987000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -447,7 +441,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724504170012</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Error Handler Endpoint">
+      <option name="closed" value="true" />
+      <created>1724510242308</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1724510242308</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +469,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Rename Login Response DTO" />
     <MESSAGE value="Bug Fixed" />
     <MESSAGE value="1. Remove Token from API Calls Using Session&#10;2. Pass Bearer Token on HttpClient&#10;3. Add Base Service to DI" />
     <MESSAGE value="Bearer Flag" />
@@ -492,6 +493,7 @@
     <MESSAGE value="Program.cs CleanUp" />
     <MESSAGE value="." />
     <MESSAGE value="Auto Migrator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auto Migrator" />
+    <MESSAGE value="Error Handler Endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error Handler Endpoint" />
   </component>
 </project>
