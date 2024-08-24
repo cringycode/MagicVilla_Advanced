@@ -1,73 +1,67 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace MagicVilla_VillaAPI;
-
-public class ConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>
+namespace MagicVilla_VillaAPI
 {
-    public void Configure(SwaggerGenOptions options)
+    public class ConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>
     {
-        options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        readonly IApiVersionDescriptionProvider provider;
+
+        public ConfigureSwaggerOptions(IApiVersionDescriptionProvider provider) => this.provider = provider;
+
+
+        public void Configure(SwaggerGenOptions options)
         {
-            Description =
-                "JWT Authorization header using the Bearer scheme. \r\n\r\n " +
-                "Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\n" +
-                "Example: \"Bearer 12345abcdef\"",
-            Name = "Authorization",
-            In = ParameterLocation.Header,
-            Scheme = "Bearer"
-        });
-        options.AddSecurityRequirement(new OpenApiSecurityRequirement()
-        {
+            options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
-                new OpenApiSecurityScheme
+                Description =
+                    "JWT Authorization header using the Bearer scheme. \r\n\r\n " +
+                    "Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\n" +
+                    "Example: \"Bearer 12345abcdef\"",
+                Name = "Authorization",
+                In = ParameterLocation.Header,
+                Scheme = "Bearer"
+            });
+            options.AddSecurityRequirement(new OpenApiSecurityRequirement()
+            {
                 {
-                    Reference = new OpenApiReference
+                    new OpenApiSecurityScheme
                     {
-                        Type = ReferenceType.SecurityScheme,
-                        Id = "Bearer"
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        },
+                        Scheme = "oauth2",
+                        Name = "Bearer",
+                        In = ParameterLocation.Header
                     },
-                    Scheme = "oauth2",
-                    Name = "Bearer",
-                    In = ParameterLocation.Header
-                },
-                new List<string>()
+                    new List<string>()
+                }
+            });
+
+            foreach (var desc in provider.ApiVersionDescriptions)
+            {
+                options.SwaggerDoc(desc.GroupName, new OpenApiInfo
+                {
+                    Version = desc.ApiVersion.ToString(),
+                    Title = $"Magic Villa {desc.ApiVersion}",
+                    Description = "API to manage Villa",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Dotnetmastery",
+                        Url = new Uri("https://dotnetmastery.com")
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Example License",
+                        Url = new Uri("https://example.com/license")
+                    }
+                });
             }
-        });
-        options.SwaggerDoc("v1", new OpenApiInfo
-        {
-            Version = "v1.0",
-            Title = "Magic Villa V1",
-            Description = "API to manage Villa",
-            TermsOfService = new Uri("https://example.com/terms"),
-            Contact = new OpenApiContact
-            {
-                Name = "Dotnetmastery",
-                Url = new Uri("https://dotnetmastery.com")
-            },
-            License = new OpenApiLicense
-            {
-                Name = "Example License",
-                Url = new Uri("https://example.com/license")
-            }
-        });
-        options.SwaggerDoc("v2", new OpenApiInfo
-        {
-            Version = "v2.0",
-            Title = "Magic Villa V2",
-            Description = "API to manage Villa",
-            TermsOfService = new Uri("https://example.com/terms"),
-            Contact = new OpenApiContact
-            {
-                Name = "Dotnetmastery",
-                Url = new Uri("https://dotnetmastery.com")
-            },
-            License = new OpenApiLicense
-            {
-                Name = "Example License",
-                Url = new Uri("https://example.com/license")
-            }
-        });
+        }
     }
 }

@@ -10,10 +10,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/ConfigureSwaggerOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicVilla/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/Program.cs" afterDir="false" />
+    <list default="true" id="f766c15d-57b2-4f9c-9d9c-5bc26463cf87" name="Changes" comment="Program.cs CleanUp">
+      <change beforePath="$PROJECT_DIR$/MagicVilla_VillaAPI/ConfigureSwaggerOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MagicVilla_VillaAPI/ConfigureSwaggerOptions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +171,7 @@
       <workItem from="1724347527631" duration="4587000" />
       <workItem from="1724360534710" duration="3508000" />
       <workItem from="1724418489706" duration="12337000" />
-      <workItem from="1724501793647" duration="1743000" />
+      <workItem from="1724501793647" duration="1961000" />
     </task>
     <task id="LOCAL-00001" summary="DB Setup">
       <option name="closed" value="true" />
@@ -423,7 +421,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724442726810</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Program.cs CleanUp">
+      <option name="closed" value="true" />
+      <created>1724503638894</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1724503638894</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +449,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="File" />
     <MESSAGE value="File Upload pt.3" />
     <MESSAGE value="Rename JWT Token" />
     <MESSAGE value="Rename Login Response DTO" />
@@ -468,6 +473,7 @@
     <MESSAGE value="Separating out Message Builder" />
     <MESSAGE value="User Repo CleanUp" />
     <MESSAGE value="Revoke Token on Logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revoke Token on Logout" />
+    <MESSAGE value="Program.cs CleanUp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Program.cs CleanUp" />
   </component>
 </project>
