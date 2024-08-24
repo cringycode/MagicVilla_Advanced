@@ -24,6 +24,14 @@ namespace MagicVilla_VillaAPI.Controllers
 
         #endregion
 
+        [HttpGet("Error")]
+        public async Task<IActionResult> Error()
+        {
+            throw new FileNotFoundException();
+        }
+
+        #region LOGIN
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDTO model)
         {
@@ -41,6 +49,10 @@ namespace MagicVilla_VillaAPI.Controllers
             _response.Result = TokenDto;
             return Ok(_response);
         }
+
+        #endregion
+
+        #region REGISTER
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterationRequestDTO model)
@@ -67,6 +79,10 @@ namespace MagicVilla_VillaAPI.Controllers
             _response.IsSuccess = true;
             return Ok(_response);
         }
+
+        #endregion
+
+        #region REFRESH
 
         [HttpPost("refresh")]
         public async Task<IActionResult> GetNewTokenFromRefreshToken([FromBody] TokenDTO tokenDTO)
@@ -95,6 +111,9 @@ namespace MagicVilla_VillaAPI.Controllers
             }
         }
 
+        #endregion
+
+        #region REVOKE
 
         [HttpPost("revoke")]
         public async Task<IActionResult> RevokeRefreshToken([FromBody] TokenDTO tokenDTO)
@@ -111,5 +130,7 @@ namespace MagicVilla_VillaAPI.Controllers
             _response.Result = "Invalid Input";
             return BadRequest(_response);
         }
+
+        #endregion
     }
 }

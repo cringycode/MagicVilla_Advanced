@@ -88,6 +88,7 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.UseExceptionHandler("/ErrorHandling/ProcessError");
 app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseAuthentication();
